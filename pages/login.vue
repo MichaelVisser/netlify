@@ -32,9 +32,7 @@ const login = async () => {
   console.log("variable 'redirectTo': " + redirectTo);
   const { error } = await supabase.auth.signInWithOAuth({
     provider: 'github',
-    options: { 
-      redirectTo: 'https://google.com' 
-    }
+    options: { redirectTo },
   });
 
   if (error) {
